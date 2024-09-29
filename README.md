@@ -1,5 +1,5 @@
 # mazerunning
-A game made with unity where you try to finish as many maze levels as possible before your time runs out.
+In this game you try to find your way through as many mazes until the timer runs out. Collect Items to gain time. If you run into an enemy, it will reduce your time. The maze gets bigger each round and is procedurally generated. Good Luck!
 
 ### How to start
 Open the Build_local3 folder and execute "raus.exe"

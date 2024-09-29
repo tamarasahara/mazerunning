@@ -33,7 +33,7 @@ public class MazeCreator : MonoBehaviour
         enemies = new GameObject("enemies_1");
 
         player = GameObject.Find("Rin2_");
-        floor = GameObject.Find("floor");
+        //floor = GameObject.Find("floor");
         start = GameObject.Find("start");
         end = GameObject.Find("end");
 
@@ -68,8 +68,8 @@ public class MazeCreator : MonoBehaviour
             height = 10 + level - 1;
         }
 
-        floor.transform.localScale = new Vector3(height+3, 1, width+1);
-        floor.transform.position = new Vector3(height/2, floor.transform.position[1], width/2);
+        //floor.transform.localScale = new Vector3(height+3, 1, width+1);
+        //floor.transform.position = new Vector3(height/2, floor.transform.position[1], width/2);
 
         Destroy(labyrinth);
         Destroy(items);
@@ -114,7 +114,7 @@ public class MazeCreator : MonoBehaviour
                 if (maze[x,y] == 0) {
                     GameObject randomWall = chooseWall();
                     GameObject wallblock = GameObject.Instantiate(randomWall);
-                    wallblock.transform.position = new Vector3(x,0,y);
+                    wallblock.transform.position = new Vector3(x,-0.44f,y);
                     wallblock.transform.SetParent(labyrinth.transform);
                 }
 

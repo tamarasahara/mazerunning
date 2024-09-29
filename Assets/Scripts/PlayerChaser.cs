@@ -15,7 +15,7 @@ public class PlayerChaser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioM = GameObject.Find("ManagerAudio").GetComponent<AudioManager>();
+        //audioM = GameObject.Find("ManagerAudio").GetComponent<AudioManager>();
         chaseTimeLeft = chaseTime;
     }
 
@@ -35,21 +35,21 @@ public class PlayerChaser : MonoBehaviour
     {
         enemy1.isFollowing = true;
         if (!hasPlayedFirstCaughtSound) {
-            audioM.Play("chasingPlayer");
-            hasPlayedFirstCaughtSound = true;
+            //audioM.Play("chasingPlayer");
+            //hasPlayedFirstCaughtSound = true;
         }
         else {
-            audioM.Play("chasingPlayer2");
+            //audioM.Play("chasingPlayer2");
         }
     }
 
     void OnDestroy()
     {
         if (audioM.IsPlaying("chasingPlayer")) {
-            audioM.Stop("chasingPlayer");
+            //audioM.Stop("chasingPlayer");
         }
         if (audioM.IsPlaying("chasingPlayer2")) {
-            audioM.Stop("chasingPlayer2");
+            //audioM.Stop("chasingPlayer2");
         }
     }
 }

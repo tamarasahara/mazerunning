@@ -248,9 +248,9 @@ public class PlayerController : MonoBehaviour
                 // Calculate how fast we should be moving
                 Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-                // Checks if player is walking and isGrounded
-                // Will allow head bob
-                if (targetVelocity.x != 0 || targetVelocity.z != 0)
+                // Check if the player is moving (in any direction) and grounded
+                // Using Mathf.Abs() to check movement in any direction, even when values are negative
+                if (Mathf.Abs(targetVelocity.x) > 0.1f || Mathf.Abs(targetVelocity.z) > 0.1f)
                 {
                     isWalking = true;
                 }
@@ -258,6 +258,7 @@ public class PlayerController : MonoBehaviour
                 {
                     isWalking = false;
                 }
+
 
                 // All movement calculations shile sprint is active
                 if (enableSprint && Input.GetKey(sprintKey) && sprintRemaining > 0f && !isSprintCooldown)

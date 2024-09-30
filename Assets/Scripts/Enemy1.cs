@@ -10,7 +10,7 @@ public class Enemy1 : MonoBehaviour
     private Vector3 velocity;
     private GameObject player;
 
-    public float moveSpeed = 0.01f;
+    public float moveSpeed = 0.5f;
     public bool isFollowing = false;
 
     private void Start() {

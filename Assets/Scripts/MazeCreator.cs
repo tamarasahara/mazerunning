@@ -26,6 +26,8 @@ public class MazeCreator : MonoBehaviour
     private GameObject items;
     private GameObject enemies;
 
+    public GameObject floor2;
+
     void Start()
     {
         Debug.Log("start was called");
@@ -68,8 +70,8 @@ public class MazeCreator : MonoBehaviour
             height = 10 + level - 1;
         }
 
-        //floor.transform.localScale = new Vector3(height+3, 1, width+1);
-        //floor.transform.position = new Vector3(height/2, floor.transform.position[1], width/2);
+        //floor2.transform.localScale = new Vector3(height+3, 1, width+1);
+        //floor2.transform.position = new Vector3(height/2, floor.transform.position[1], width/2);
 
         Destroy(labyrinth);
         Destroy(items);
